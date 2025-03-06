@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+body {
+  background: linear-gradient(#ddd 30%, #fff 60%);
+}
+
+section .inner {
+  padding: 4em 0;
+  margin: 0 auto;
+  width: 90%;
+}
+section .inner .caption {
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+section .inner .content {
+  text-align: justify;
+  margin-top: 1em;
+  width: 100%;
+}
+section .inner .galary {
+  margin-top: 2em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+section .inner .galary li {
+  width: 50%;
+}
+section ~ section .inner {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media all and (min-width: 760px) {
+  section .inner {
+    width: 80%;
+    max-width: 1000px;
+    padding: 6em 0;
+  }
+  section .inner .content {
+    width: 60%;
+  }
+  section .inner .galary li {
+    width: 25%;
+  }
+}

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import './RWD';
+
+body {
+    background-color: #323e48;
+}
+
+section {
+    background: linear-gradient(#ddd 30%, #fff 60%);
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        padding: 2em 5%;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+
+            .logo {
+                //width: 40%;
+                width: 100%;
+
+                img {
+                    //margin: 0 auto;
+                    width: 50%;
+                }
+            }
+
+            .content {
+                //width: 60%;
+                //border-left: 1px solid #323e48;
+                color: #323e48;
+
+                .title {
+                    font-size: 1.3em;
+                }
+                .contact_detail {
+                    margin-top: 1.5em;
+
+                    li {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        line-height: 1.25;
+
+                        &~li {
+                            margin-top: 0.5em;
+                        }
+
+                        .icon {
+                            width: 1.5em;
+                            margin-right: 0.5em;
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+                .line_btn {
+                    cursor: pointer;
+                    margin-top: 1.5em;
+                    width: 3em;
+                }
+            }
+        }
+
+        .map {
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    @include pc-s {
+        .inner {
+            padding: 3em 0 0;
+            gap: 3em;
+            .info {
+                width: 100%;
+                flex-direction: row;
+
+                .logo {
+                    width: 40%;
+
+                    img {
+                        margin: 0 auto;
+                    }
+                }
+                .content {
+                    width: 60%;
+                    border-left: 1px solid #323e48;
+                    padding-left: 2em;
+
+                    .line_btn {
+                        &:hover {
+                            scale: 1.03;
+                        }
+                    }
+                }
+            }
+    
+            .map {
+                
+            }
+        }
+    }
+
+    @include pc-m {
+        .inner {
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1280px;
+            padding: 5em 0;
+            flex-direction: row;
+            align-items: stretch;
+
+            .info {
+                width: 65%;
+
+                .logo {
+                    width: 35%;
+                    img {
+                        margin: 0;
+                        width: 60%;
+                        max-width: 8em;
+                    }
+                }
+
+                .content {
+                    width: 65%;
+                    font-size: 1em;
+                    
+                    .contact_detail {
+                        margin-top: 2em;
+                    }
+
+                    .line_btn {
+                        margin-top: 2em;
+                    }
+                }
+            }
+            .map {
+                width: 35%;
+                aspect-ratio: unset;
+            }
+        }
+    }
+}
+
+.line_popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+
+    &.open {
+        display: block;
+    }
+
+    .mask {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+
+    .popup_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        max-width: 800px;
+        border-radius: 1em;
+        padding: 5vh 2em;
+        background-color: #fff;
+
+        .qrcode {
+            width: 10em;
+            max-width: 30vh;
+            margin: 0 auto;
+        }
+
+        .content {
+            margin-top: 2em;
+            font-size: 0.8em;
+            text-align: center;
+
+            h3 {
+                line-height: 1.25;
+                font-size: 1.35em;
+                font-weight: 400;
+                margin-bottom: 1em;
+            }
+        }
+
+        .close {
+            cursor: pointer;
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+            width: 2em;
+            aspect-ratio: 1/1;
+            border-radius: 99em;
+            //border: 2px solid #323e48;
+            rotate: 45deg;
+
+            &::after,
+            &:before {
+                content: "";
+                width: 70%;
+                height: 2px;
+                background-color: #323e48;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            &:after {
+                transform: translate(-50%,-50%) rotate(90deg);
+            }
+        }
+
+        @include pc-m {
+            padding: 10vh 2em;
+
+            .qrcode {
+                width: 10em;
+                max-width: 80%;
+            }
+        }
+    }
+
+    
+}

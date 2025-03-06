@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property = "og:type" content="website" />
+	<meta property = "og:title" content="POLI-officail" />
+	<meta property = "og:url" content="">
+	<meta property = "og:description" content="" >
+	<meta property = "og:image" content="" />
+
+	<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/performance.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+	<!-- js -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+    <script src="js/defualt.js"></script>
+
+	<title>POLI-officail</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="img/logo.svg" alt="POLI-寶利資訊"></div>
+        <nav>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html"><h2>關於我們</h2></a></li>
+                <li class="nav_item has_sub_nav">
+                    <a href="service.html"><h2>服務項目</h2></a>
+                    <div class="sub_nav">
+                        <div class="nav_title"><span>/</span> 服務項目</div>
+                        <ul>
+                            <li>
+                                <a href="service.html#serv-1" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/01.svg" alt="儲值式電錶規劃及安裝">
+                                    <div class="sub_caption"><h3>儲值式電錶<br>規劃及安裝</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-2" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/02.svg" alt="儲值式插座規劃及安裝">
+                                    <div class="sub_caption"><h3>儲值式插座<br>規劃及安裝</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-3" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/03.svg" alt="監控系統">
+                                    <div class="sub_caption"><h3>監控系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-4" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/04.svg" alt="門禁系統">
+                                    <div class="sub_caption"><h3>門禁系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-5" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/05.svg" alt="WIFI自動收費系統">
+                                    <div class="sub_caption"><h3>WIFI<br>自動收費系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-6" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/06.svg" alt="網路安裝">
+                                    <div class="sub_caption"><h3>Nas及網路<br>設定規劃</h3></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item active"><a href="performance.html"><h2>實績分享</h2></a></li>
+                <li class="nav_item"><a href="contact.html"><h2>聯絡我們</h2></a></li>
+            </ul>
+        </nav>
+        <div class="ham">
+            <div class="line _t"></div>
+            <div class="line _m"></div>
+            <div class="line _b"></div>
+        </div>
+    </header>
+
+    <section id="case_detail">
+        <div class="inner">
+
+            <div class="case_caption">
+                <h2><span>/</span> 新竹巨城-監控系統</h2>
+            </div>
+
+            <div class="photo_galary">
+
+                <div class="photo_show"><img class="cover" ></div>
+
+                <div class="photo_list">
+                    <ul>
+                        <li><img class="cover" src="img/case/01@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/02@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/03@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/04@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/05@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/06@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/07@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/08@4x-100.jpg"></li>
+                        <li><img class="cover" src="img/case/09@4x-100.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="inner">
+            <div>寶利資訊有限公司</div>
+            <div>Copyright© 2024 Poli Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    <script>
+        $(function(){
+            $(".photo_show img").attr("src", $(".photo_list li:nth-child(1) img").attr("src") )
+            
+            $(".photo_list li").click(function(){
+                src = $(this).children("img").attr("src");
+                $(".photo_show img").attr("src", src );
+            })
+        })
+    </script>
+</body>
+
+</html>

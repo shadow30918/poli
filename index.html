@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property = "og:type" content="website" />
+	<meta property = "og:title" content="POLI-officail" />
+	<meta property = "og:url" content="">
+	<meta property = "og:description" content="" >
+	<meta property = "og:image" content="" />
+
+	<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+
+	<!-- js -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+    <script src="js/defualt.js"></script>
+
+	<title>POLI-officail</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="img/logo.svg" alt="POLI-寶利資訊"></div>
+        <nav>
+            <ul class="nav_list">
+                <li class="nav_item active"><a href="index.html"><h2>關於我們</h2></a></li>
+                <li class="nav_item has_sub_nav">
+                    <a href="service.html"><h2>服務項目</h2></a>
+                    <div class="sub_nav">
+                        <div class="nav_title"><span>/</span> 服務項目</div>
+                        <ul>
+                            <li>
+                                <a href="service.html#serv-1" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/01.svg" alt="儲值式電錶規劃及安裝">
+                                    <div class="sub_caption"><h3>儲值式電錶<br>規劃及安裝</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-2" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/02.svg" alt="儲值式插座規劃及安裝">
+                                    <div class="sub_caption"><h3>儲值式插座<br>規劃及安裝</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-3" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/03.svg" alt="監控系統">
+                                    <div class="sub_caption"><h3>監控系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-4" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/04.svg" alt="門禁系統">
+                                    <div class="sub_caption"><h3>門禁系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-5" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/05.svg" alt="WIFI自動收費系統">
+                                    <div class="sub_caption"><h3>WIFI<br>自動收費系統</h3></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="service.html#serv-6" onclick="toggle_menu('close')">
+                                    <img src="img/menu/service/06.svg" alt="網路安裝">
+                                    <div class="sub_caption"><h3>Nas及網路<br>設定規劃</h3></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item"><a href="performance.html"><h2>實績分享</h2></a></li>
+                <li class="nav_item"><a href="contact.html"><h2>聯絡我們</h2></a></li>
+            </ul>
+        </nav>
+        <div class="ham">
+            <div class="line _t"></div>
+            <div class="line _m"></div>
+            <div class="line _b"></div>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="inner">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper banner_list">
+                    <li class="swiper-slide">
+                        <img class="cover" src="img/index/bn/01.png" alt="">
+                        <div class="content">
+                            <h2><span>寶利資訊</span> 電力整合專家</h2>
+                            <p>XXXX XXX XXX XXXXX XXXXXX XXX XXX</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img class="cover" src="img/index/bn/02.png" alt="">
+                        <div class="content">
+                            <h2><span>寶利資訊</span> 電力整合專家</h2>
+                            <p>XXXX XXX XXX XXXXX XXXXXX XXX XXX</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img class="cover" src="img/index/bn/03.png" alt="">
+                        <div class="content">
+                            <h2>儲值式電錶</h2>
+                            <p>XXXXXX XXXXXX XXXXXXXXXXX XX XXXXXX XXXXX XXXXXXX XXX XXX XXXXXX XXXXX XXXXXX XXX X XXXX XXXXXXXXXX XXXXXX  XXXXXX XX XXX XXXXXX XXXX XXXXX XXXXXXX XX XXX XXX</p>
+                            <p>規格</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img class="cover" src="img/index/bn/04.png" alt="">
+                        <div class="content">
+                            <h2>WIFI 自動收費系統</h2>
+                            <p>XXXXXX XXXXXX XXXXXXXXXXX XX XXXXXX XXXXX XXXXXXX XXX XXX XXXXXX XXXXX XXXXXX XXX X XXXX XXXXXXXXXX XXXXXX  XXXXXX XX XXX XXXXXX XXXX XXXXX XXXXXXX XX XXX XXX</p>
+                            <p>規格</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img class="cover" src="img/index/bn/05.png" alt="">
+                        <div class="content">
+                            <h2>儲值式電錶</h2>
+                            <p>XXXXXX XXXXXX XXXXXXXXXXX XX XXXXXX XXXXX XXXXXXX XXX XXX XXXXXX XXXXX XXXXXX XXX X XXXX XXXXXXXXXX XXXXXX  XXXXXX XX XXX XXXXXX XXXX XXXXX XXXXXXX XX XXX XXX</p>
+                            <p>規格</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-prev swiper-button"></div>
+                <div class="swiper-button-next swiper-button"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="inner">
+            <div class="sec_title"><h2>關於我們</h2></div>
+            <div class="content">
+                <p>寶利資訊創立於1992年創立於桃園，我們專注於電力解決方案pa65XXX XXXXXX XXXXXXXXX XXXXXXXX XXX XXXXXXXX XXXXXX XXXXXXXXXXXXXXXX XXXX XXXXXXXXXXX XXXXXXX XXXXX</p>
+            </div>
+        </div>
+        <div class="about_kv"><img class="cover" src="img/index/about_bottom_3.png" alt=""></div>
+    </section>
+
+    <footer id="contact">
+        <div class="inner">
+            <div>寶利資訊有限公司</div>
+            <div>Copyright© 2024 Poli Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    
+    <script>
+        let swiperSec1 = new Swiper('#banner .swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                disabledClass: "-disabled"
+            }
+        })
+    </script>
+</body>
+
+</html>

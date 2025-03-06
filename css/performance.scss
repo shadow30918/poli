@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import './RWD';
+
+body {
+    background-color: #323e48;
+}
+
+
+section {
+    background-color: #ddd;
+
+    .inner {
+        padding: 3em 0;
+        margin: 0 auto;
+        width: 90%;
+
+        .performance_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            --gap: 5%;
+            --amount: 2;
+            column-gap: var(--gap);
+            row-gap: 2em;
+            font-size: 0.75em;
+
+            li {
+                text-align: center;
+                width: calc((100% - var(--gap)*(var(--amount) - 1)) / var(--amount));
+
+                .case {
+                    background-color: #fff;
+                    border-radius: 1em;
+                    overflow: hidden;
+
+                    img {
+                        margin: 0 auto;
+                        width: 80%;
+                    }
+
+                    .caption {
+                        padding: 0.5em;
+                        color: #fff;
+                        background-color: #66abd5;
+                    }
+                }
+                .content {
+                    padding: 1em 0;
+
+                    .date {
+                        margin-top: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include pc-s {
+
+        .inner {
+            width: 80%;
+            max-width: 1000px;
+            padding: 4em 0;
+
+            .performance_list {
+                --gap: 5%;
+                --amount: 3;
+                font-size: 1em;
+            }
+        }
+    }
+
+    @include pc-m {
+
+        .inner {
+
+            .performance_list {
+                --gap: 3%;
+                --amount: 5;
+                font-size: 0.8em;
+
+                li {
+                    cursor: pointer;
+
+                    &:hover {
+
+                        .case {
+                            scale: 1.03;
+                            .caption {
+                                background-color: #323e48;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#case_detail {
+    .inner {
+        padding: 2em 0;
+
+        .case_caption {
+            span {
+                font-weight: 600;
+                color: #66abd5;
+            }
+        }
+
+        .photo_galary {
+            margin-top: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+
+            .photo_show {
+                width: 100%;
+                aspect-ratio: 1/1;
+                background-color: #ccc;
+            }
+
+            .photo_list {
+                overflow: auto;
+                padding-bottom: 1em;
+
+                &::-webkit-scrollbar {
+                    width: 7px;
+                    height: 7px;
+                }
+            
+                &::-webkit-scrollbar-button {
+                    background: transparent;
+                    border-radius: 4px;
+                    display: none;
+                }
+            
+                &::-webkit-scrollbar-track-piece {
+                    background: transparent;
+                    background-color: #ccc;
+                    border-radius: 99em;
+                }
+            
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 4px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    //border: 1px solid slategrey;
+                }
+            
+                &::-webkit-scrollbar-track {
+                    box-shadow: transparent;
+                }
+
+                ul {
+                    width: max-content;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.5em;
+
+                    li {
+                        width: 3.5em;
+                        aspect-ratio: 1/1;
+                        border: 1px solid #ccc;
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+
+    @include pc-s {
+        .inner {
+            padding: 3em 0;
+
+            .photo_galary {
+                flex-direction: row;
+                gap: 2%;
+
+                .photo_show {
+                    width: 48%;
+                }
+
+                .photo_list {
+                    width: 50%;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    padding: 0;
+                    padding-right: 10px;
+
+                    
+
+                    ul {
+                        width: 100%;
+                        height: 100%;
+                        flex-wrap: wrap;
+                        gap: 1em;
+
+                        li {
+                            cursor: pointer;
+                            width: calc((100% - 2em)/3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
